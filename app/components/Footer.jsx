@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { assets } from "@/assets/assets";
 
-const Footer = ({ isDarkMode }) => {
+const Footer = ({ isDarkMode, language }) => {
     return (
         <motion.div 
           initial={{ opacity: 0 }}

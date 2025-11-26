@@ -41,6 +41,7 @@ import innovation from './innovation.jpg';
 import technical from './technical.jpg';
 import etoile from './etoile.jpg';
 import linux from './linux.jpg';
+import linux_dark from './linux_dark.png';
 
 export const assets = {
     user_image,
@@ -85,7 +86,8 @@ export const assets = {
     innovation,
     technical,
     etoile,
-    linux
+    linux,
+    linux_dark
 };
 
 export const workData = [
@@ -112,29 +114,67 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { 
-        icon: assets.code_icon, 
-        title: '13 Matches - Java Game', 
-        description: 'Strategic game developed in Java where two players compete by removing matches. Implementation of game algorithms and graphical interface.', 
-        link: 'https://github.com/AstA6XD9/my-projects/tree/main/projet-court' 
-    },
-    { 
-        icon: assets.mobile_icon, 
-        title: 'Audio Application - Sound Game', 
-        description: 'Interactive application developed in Java for creating and manipulating sounds. Intuitive user interface for audio editing and music creation.', 
-        link: 'https://github.com/AstA6XD9/my-projects/tree/main/src' 
-    },
-    { 
-        icon: assets.code_icon, 
-        title: 'Data Compression - Ada', 
-        description: 'Data compression algorithm implemented in Ada using Huffman coding method. Performance optimization and memory management for compressing large files.', 
-        link: 'https://github.com/AstA6XD9/my-projects' 
+    {
+        icon: assets.graphics_icon,
+        titleKey: 'football',
+        link: 'https://github.com/AstA6XD9/football-analysis',
+        year: '2025',
+        stack: ['Python', 'YOLOv8', 'OpenCV', 'KMeans', 'Optical Flow', 'NumPy'],
+        status: 'Research',
+        category: 'Machine Learning',
+        image: '/projects/football-analysis.jpg',
+        highlight: true
     },
     { 
         icon: assets.web_icon, 
-        title: 'Web Portfolio - Next.js', 
-        description: 'Personal portfolio website developed with Next.js and Tailwind CSS. Responsive design with dark/light mode and smooth animations.', 
-        link: 'https://github.com/AstA6XD9/portfolio' 
+        titleKey: 'portfolio',
+        link: 'https://github.com/AstA6XD9/portfolio',
+        year: '2024',
+        stack: ['Next.js', 'Tailwind', 'Framer Motion'],
+        status: 'Live',
+        highlight: false
+    },
+    { 
+        icon: assets.graphics_icon, 
+        titleKey: 'shadowless',
+        link: 'https://github.com/AstA6XD9/shadow-removal',
+        year: '2025',
+        stack: ['Python', 'OpenCV', 'UNet'],
+        status: 'Research'
+    },
+    { 
+        icon: assets.mobile_icon, 
+        titleKey: 'audio',
+        link: 'https://github.com/AstA6XD9/my-projects/tree/main/src',
+        year: '2023',
+        stack: ['JavaFX', 'MIDI', 'DSP'],
+        status: 'Open source'
+    },
+    { 
+        icon: assets.project_icon, 
+        titleKey: 'huffman',
+        link: 'https://github.com/AstA6XD9/my-projects',
+        year: '2024',
+        stack: ['Ada', 'Python', 'Bats'],
+        status: 'CLI'
+    },
+    { 
+        icon: assets.code_icon_dark, 
+        titleKey: 'matches',
+        link: 'https://github.com/AstA6XD9/my-projects/tree/main/projet-court',
+        year: '2024',
+        stack: ['Java', 'Swing', 'JUnit'],
+        status: 'Play'
+    },
+    {
+        icon: assets.code_icon_dark,
+        titleKey: 'minishell',
+        link: 'https://github.com/votre-username/minishell',
+        year: '2024',
+        stack: ['C', 'Unix', 'Process Management'],
+        status: 'Systems',
+        category: 'Systems',
+        image: '/projects/minishell.jpg'
     },
 ]
 

@@ -3,8 +3,16 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { assets, infoList } from "../../assets/assets"
 import { toolsData } from "../../assets/assets"
+import { translations } from "../translations"
 
-export default function About({ isDarkMode }) {
+const interests = [
+    { name: "Basketball", icon: "🏀" },
+    { name: "Fitness", icon: "💪" },
+    { name: "Music & Events", icon: "🎵" }
+]
+
+export default function About({ isDarkMode, language }) {
+    const t = translations[language] || translations.en;
     return (
         <motion.div 
           initial={{ opacity: 0 }}
@@ -19,37 +27,28 @@ export default function About({ isDarkMode }) {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
+              className="mb-12"
             >
-              <h4 className="text-center mb-2 text-lg font-Ovo">Introduction</h4>
-              <h2 className="text-center text-5xl font-Ovo">About me</h2>
+              <h4 className="text-center mb-2 text-lg font-Ovo">{t.about.intro}</h4>
+              <h2 className="text-center text-5xl font-Ovo">{t.about.title}</h2>
             </motion.div>
             
-            <div className="flex w-full flex-col lg:flex-row items-start gap-20 my-20">
+            <div className="flex w-full flex-col gap-12 lg:gap-16 my-12 lg:my-16">
                 <motion.div 
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.1 }}
                   viewport={{ once: true }}
-                  className="w-full lg:w-1/2 rounded-3xl -mt-8"
-                >
-                    <Image src={assets.user_image} alt="User" className="w-full h-[28rem] sm:h-[32rem] lg:h-[34rem] object-cover rounded-3xl" />
-                </motion.div>
-                
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="w-full lg:w-1/2"
+                  className="w-full"
                 >
                     <motion.p 
                       initial={{ y: 20, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.4, delay: 0.3 }}
                       viewport={{ once: true }}
-                      className="mb-10 max-w-2xl font-Ovo"
+                      className="mb-8 max-w-2xl font-Ovo leading-relaxed text-base sm:text-lg"
                     >
-                    I completed two years of preparatory classes in Mathematics and Physics (MPSI/MP), where I built a solid foundation in mathematics and physics. After passing the national entrance exams, I was admitted to ENSEEIHT in Digital Sciences. During my first generalist year, I acquired broad knowledge in areas such as imperative programming, object-oriented technologies, scientific computing, and data analysis, including an introduction to deep learning. I then completed an internship at a startup specialized in creating Moroccan traditional salons using 3D models, where I worked on shadow removal and gained practical experience with computer vision, OpenCV, and deep learning. Through these experiences, I developed a strong professional interest in image and multimedia processing, which I chose to specialize in during my second year at ENSEEIHT.
+                    {t.about.description}
                     </motion.p>
                     
                     <motion.ul 
@@ -65,28 +64,26 @@ export default function About({ isDarkMode }) {
                               whileInView={{ opacity: 1 }}
                               transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
                               viewport={{ once: true }}
-                              tabIndex={0} 
                               key={title + index} 
-                              className="group border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-blue-50 active:bg-blue-100 focus:bg-blue-50 hover:ring-1 hover:ring-blue-300 hover:-translate-y-1 duration-500
-                              hover:shadow-lg transition-colors"
+                              className="border-[0.5px] border-gray-400 rounded-xl p-6 bg-white/70 dark:bg-gray-800/50 transition-colors"
                             >
                                 <Image src={icon} alt={title} className="w-7 mt-3" width={28} height={28} />
                                 <div>
-                                    <h3 className="my-4 font-semibold text-gray-700 transition-colors group-hover:text-blue-600 group-active:text-blue-600 group-focus:text-blue-600 font-Ovo">{title}</h3>
-                                    <p className="text-gray-600 text-sm transition-colors group-hover:text-gray-800 group-active:text-gray-800 group-focus:text-gray-800 font-Ovo">{description}</p>
+                                    <h3 className="my-4 font-semibold text-gray-700 dark:text-white font-Ovo">{title}</h3>
+                                    <p className="text-gray-600 dark:text-gray-300 text-sm font-Ovo">{description}</p>
                                 </div>
                             </motion.li>
                         ))}
                     </motion.ul>
-                    
+
                     <motion.h4 
                       initial={{ y: 20, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.4, delay: 0.6 }}
                       viewport={{ once: true }}
-                      className="my-6 text-gray-700 font-Ovo"
+                      className={`my-6 font-Ovo ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}
                     >
-                        Tools I use
+                        {t.about.tools}
                     </motion.h4>
                     
                     <motion.ul 
@@ -97,8 +94,13 @@ export default function About({ isDarkMode }) {
                       className="flex items-center gap-3 sm:gap-5"
                     >
                         {toolsData.map((tool,index)=>{
-                            // Utiliser la version sombre de Firebase en mode sombre
-                            const toolSrc = (tool === assets.firebase && isDarkMode) ? assets.firebase_dark : tool;
+                            // Utiliser la version sombre de Firebase et Linux en mode sombre
+                            let toolSrc = tool;
+                            if (tool === assets.firebase && isDarkMode) {
+                                toolSrc = assets.firebase_dark;
+                            } else if (tool === assets.linux) {
+                                toolSrc = isDarkMode ? assets.linux_dark : assets.linux;
+                            }
                             return (
                                 <motion.li 
                                   initial={{ opacity: 0 }}
@@ -113,6 +115,28 @@ export default function About({ isDarkMode }) {
                             );
                         })}
                     </motion.ul>
+
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.4, delay: 0.8 }}
+                      viewport={{ once: true }}
+                      className={`mt-6 p-6 rounded-3xl border ${isDarkMode ? 'border-gray-700 bg-gray-800/40' : 'border-gray-200 bg-white/80'} backdrop-blur`}
+                    >
+                      <h4 className={`mb-4 font-Ovo ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}>{t.about.interests}</h4>
+                      <div className="flex flex-wrap gap-4">
+                        {interests.map(({ name, icon }) => (
+                          <span
+                            key={name}
+                            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold ${isDarkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-100 text-gray-700'}`}
+                          >
+                            <span className="text-lg">{icon}</span>
+                            {name}
+                          </span>
+                        ))}
+                      </div>
+                    </motion.div>
+
                 </motion.div>
             </div>
         </motion.div>

@@ -4,7 +4,7 @@ import { assets } from "@/assets/assets";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const Contact = ({ isDarkMode }) => {
+const Contact = ({ isDarkMode, language }) => {
     const [result, setResult] = useState("");
     const onSubmit = async (event) => {
         event.preventDefault();

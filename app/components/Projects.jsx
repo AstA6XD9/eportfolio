@@ -8,9 +8,9 @@ const Projects = ({ isDarkMode, language }) => {
   const t = translations[language] || translations.en;
   const featuredProject = serviceData.find((project) => project.highlight);
   const otherProjects = serviceData.filter((project) => project !== featuredProject);
-
+  
   const getProjectTitle = (titleKey) => t.projects[titleKey]?.title || titleKey;
-
+  
   const getProjectDescription = (titleKey) => t.projects[titleKey]?.description || '';
 
   const badgeTone = (status) => {
@@ -84,8 +84,8 @@ const Projects = ({ isDarkMode, language }) => {
             <div>
               <h3 className="text-3xl sm:text-4xl font-Ovo mb-4">{getProjectTitle(featuredProject.titleKey)}</h3>
               <p className={`text-base sm:text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                {getProjectDescription(featuredProject.titleKey)}
-              </p>
+              {getProjectDescription(featuredProject.titleKey)}
+            </p>
             </div>
             <ul className="flex flex-wrap gap-3">
               {featuredProject.stack?.map((tech) => (
@@ -139,16 +139,16 @@ const Projects = ({ isDarkMode, language }) => {
                 <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500/10 to-indigo-500/20 flex items-center justify-center">
                   <Image src={icon} alt="" className="w-7 h-7" />
                 </div>
-                <div>
+            <div>
                   <p className={`text-xs uppercase tracking-widest ${sublabel}`}>{t.projects.cardLabel}</p>
                   <h3 className="text-xl font-semibold">{getProjectTitle(titleKey)}</h3>
                 </div>
               </div>
               <div className="text-right space-y-1">
                 <span className="block text-sm font-semibold">{year}</span>
-                <span className={`text-xs font-semibold px-3 py-1 rounded-full ${badgeTone(status)}`}>
-                  {status}
-                </span>
+                  <span className={`text-xs font-semibold px-3 py-1 rounded-full ${badgeTone(status)}`}>
+                    {status}
+                  </span>
               </div>
             </div>
             <p className={`text-sm leading-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -162,25 +162,25 @@ const Projects = ({ isDarkMode, language }) => {
               )}
             </div>
             <ul className="flex flex-wrap gap-2">
-              {stack?.map((tech) => (
+                {stack?.map((tech) => (
                 <li
                   key={`${titleKey}-${tech}`}
                   className={`text-xs px-3 py-1.5 rounded-full border ${isDarkMode ? 'border-gray-700 text-gray-200' : 'border-gray-200 text-gray-700'}`}
                 >
-                  {tech}
-                </li>
-              ))}
-            </ul>
+                    {tech}
+                  </li>
+                ))}
+              </ul>
             <div className="mt-auto flex items-center justify-between pt-4 border-t border-dashed border-gray-600/20">
-              <a
-                href={link}
-                target="_blank"
-                rel="noreferrer"
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
                 className={`inline-flex items-center gap-3 text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200 shadow ${isDarkMode ? 'bg-gradient-to-r from-blue-400/80 to-indigo-500/80 text-white hover:opacity-95' : 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:opacity-95'}`}
-              >
-                {t.projects.viewRepo}
-                <Image src={assets.right_arrow} alt="" className="w-4" />
-              </a>
+            >
+              {t.projects.viewRepo}
+              <Image src={assets.right_arrow} alt="" className="w-4" />
+            </a>
             </div>
           </motion.div>
         ))}

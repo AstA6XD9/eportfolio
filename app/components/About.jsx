@@ -75,7 +75,7 @@ export default function About({ isDarkMode, language }) {
                             </motion.li>
                         ))}
                     </motion.ul>
-
+                    
                     <motion.h4 
                       initial={{ y: 20, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}

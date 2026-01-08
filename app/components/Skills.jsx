@@ -73,11 +73,11 @@ const getLanguages = (language) => {
       level: language === "en" ? "Beginner" : "Débutant",
       flag: "https://flagcdn.com/w80/es.png",
     },
-  ];
+];
 };
 
 const getTransversalSkills = (language) => {
-  return language === "en"
+  return language === "en" 
     ? ["Critical thinking", "Flexibility", "Effective communication", "Negotiation"]
     : ["Esprit critique", "Flexibilité", "Communication effective", "Négociation"];
 };

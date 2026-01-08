@@ -21,6 +21,7 @@ export default function Home() {
     if (storedTheme) {
       setIsDarkMode(storedTheme === "dark");
     } else {
+      setIsDarkMode(true); // Dark mode par défaut
       localStorage.setItem("theme", "dark");
     }
     if (storedLang) {

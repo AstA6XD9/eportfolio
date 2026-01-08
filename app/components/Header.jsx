@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { assets } from "../../assets/assets";
@@ -6,6 +7,7 @@ import { translations } from "../translations";
 
 export default function Header({ isDarkMode, language }) {
     const t = translations[language] || translations.en;
+    const [isCvMenuOpen, setIsCvMenuOpen] = useState(false);
     const accentBlue = isDarkMode ? 'text-blue-400' : 'text-blue-600';
     const accentPurple = isDarkMode ? 'text-purple-400' : 'text-purple-600';
     return (
@@ -61,7 +63,40 @@ export default function Header({ isDarkMode, language }) {
                 <a href="#contact"
                 className="px-5 py-1 border border-white rounded-full bg-black text-white items-center flex gap-2 font-Ovo" >{t.header.contactMe} <Image src = {assets.right_arrow_white} alt ='' className='rounded-full w-4'/></a>
 
-                <a href="/sample-resume.pdf" download className ='px-5 py-1 border rounded-full border-gray-500 flex items-center gap-2 font-Ovo' >{t.header.resume} <Image src = {assets.download_icon} alt ='' className='rounded-full w-4'/></a>
+                <div className="relative">
+                    <button
+                        onClick={() => setIsCvMenuOpen(!isCvMenuOpen)}
+                        className={`px-5 py-1 border rounded-full border-gray-500 flex items-center gap-2 font-Ovo ${isDarkMode ? 'text-white border-gray-400 hover:bg-gray-800' : 'text-black border-gray-500 hover:bg-gray-100'}`}
+                    >
+                        {t.header.resume} <Image src = {assets.download_icon} alt ='' className='rounded-full w-4'/>
+                    </button>
+                    {isCvMenuOpen && (
+                        <>
+                            <div 
+                                className="fixed inset-0 z-40" 
+                                onClick={() => setIsCvMenuOpen(false)}
+                            />
+                            <div className={`absolute top-full mt-2 right-0 rounded-lg shadow-lg z-50 min-w-[200px] ${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border`}>
+                                <a
+                                    href="/elouardini_cv.pdf"
+                                    download
+                                    onClick={() => setIsCvMenuOpen(false)}
+                                    className={`block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 rounded-t-lg transition-colors ${isDarkMode ? 'text-white' : 'text-black'}`}
+                                >
+                                    🇫🇷 CV Français
+                                </a>
+                                <a
+                                    href="/elouardini_cv_english.pdf"
+                                    download
+                                    onClick={() => setIsCvMenuOpen(false)}
+                                    className={`block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 rounded-b-lg transition-colors ${isDarkMode ? 'text-white' : 'text-black'}`}
+                                >
+                                    🇬🇧 CV English
+                                </a>
+                            </div>
+                        </>
+                    )}
+                </div>
             </motion.div>
         </motion.div>
     )

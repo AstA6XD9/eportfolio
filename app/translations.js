@@ -14,14 +14,14 @@ export const translations = {
       name: "Mohammed Amine El Ouardini",
       title: "Engineering Student in Computer Science",
       specialization: "Image & Multimedia Specialization • ENSEEIHT Toulouse",
-      description: "Passionate about image processing and computer vision. My experience at Velours3D and my computer vision projects have allowed me to develop practical expertise in image processing and deep learning.",
+      description: "Engineering student passionate about AI and computer vision. Currently at Siemens Digital Industry Software building LLM-powered tools for industrial MES automation. My experience at Velours3D and my AI projects have given me practical expertise across the full ML stack.",
       contactMe: "Contact me",
       resume: "My resume",
     },
     about: {
       intro: "Introduction",
       title: "About me",
-      description: "I completed two years of preparatory classes in Mathematics and Physics (MPSI/MP), where I built a solid foundation in mathematics and physics. After passing the entrance exams, I was admitted to ENSEEIHT in Digital Sciences. During my first generalist year, I acquired broad knowledge in areas such as imperative programming, object-oriented technologies, scientific computing, and data analysis, including an introduction to deep learning. I then completed an internship at a startup specialized in creating Moroccan traditional salons using 3D models, where I worked on shadow removal and gained practical experience with computer vision, OpenCV, and deep learning. Through these experiences, I developed a strong professional interest in image and multimedia processing, which I chose to specialize in during my second year at ENSEEIHT.",
+      description: "I completed two years of preparatory classes in Mathematics and Physics (MPSI/MP), building a solid foundation in mathematics and physics. After passing the entrance exams, I joined ENSEEIHT in Digital Sciences, where I studied imperative programming, object-oriented technologies, scientific computing, and deep learning. I then interned at Velours3D (Morocco), working on shadow removal pipelines for 3D renders using OpenCV and deep learning. I am currently completing a final-year internship at Siemens Digital Industry Software (Toulouse), developing AI-powered tools to automate the translation of pharmaceutical manufacturing procedures into the Smart Operation Designer format using Claude LLM, MCP servers, and a structured knowledge base.",
       tools: "Tools I use",
       interests: "Interests",
     },
@@ -66,10 +66,18 @@ export const translations = {
         title: "Minishell - Unix Command Interpreter",
         description: "Unix interpreter in C managing pipes, redirections, signals and fine process management.",
       },
+      debate: {
+        title: "Multi-Agent Debate Arena",
+        description: "Two Claude LLM agents debate any topic in structured rounds. A third Opus judge renders a verdict with ELO scoring and adaptive K-factor.",
+      },
+      nas: {
+        title: "Neural Architecture Search",
+        description: "AutoML system that automatically searches for optimal neural network architectures using Bayesian optimization (Optuna TPE) and evolutionary algorithms targeting edge AI constraints.",
+      },
     },
     experience: {
       title: "Professional Experience",
-      subtitle: "My professional journey in image processing and computer vision",
+      subtitle: "My professional journey in AI, image processing and computer vision",
     },
     inspiration: {
       title: "What inspires me",
@@ -94,14 +102,14 @@ export const translations = {
       name: "Mohammed Amine El Ouardini",
       title: "Élève Ingénieur en Informatique",
       specialization: "Spécialité Image & Multimédia • ENSEEIHT Toulouse",
-      description: "Passionné par le traitement d'images et la vision par ordinateur. Mon expérience chez Velours3D et mes projets en computer vision m'ont permis de développer une expertise pratique en image processing et deep learning.",
+      description: "Élève ingénieur passionné par l'IA et la vision par ordinateur. Actuellement chez Siemens Digital Industry Software à développer des outils LLM pour l'automatisation MES industrielle. Mon expérience chez Velours3D et mes projets IA m'ont donné une expertise pratique sur toute la chaîne ML.",
       contactMe: "Me contacter",
       resume: "Mon CV",
     },
     about: {
       intro: "Introduction",
       title: "À propos de moi",
-      description: "J'ai complété deux années de classes préparatoires en Mathématiques et Physique (MPSI/MP), où j'ai construit une base solide en mathématiques et physique. Après avoir réussi les concours d'entrée, j'ai été admis à l'ENSEEIHT en Sciences du Numérique. Au cours de ma première année généraliste, j'ai acquis des connaissances approfondies dans des domaines tels que la programmation impérative, les technologies orientées objet, le calcul scientifique et l'analyse de données, incluant une introduction au deep learning. J'ai ensuite effectué un stage dans une startup spécialisée dans la création de salons traditionnels marocains utilisant des modèles 3D, où j'ai travaillé sur la suppression d'ombres et acquis une expérience pratique en vision par ordinateur, OpenCV et deep learning. À travers ces expériences, j'ai développé un fort intérêt professionnel pour le traitement d'images et multimédia, que j'ai choisi de spécialiser lors de ma deuxième année à l'ENSEEIHT.",
+      description: "J'ai complété deux années de classes préparatoires en Mathématiques et Physique (MPSI/MP), où j'ai construit une base solide en mathématiques et physique. Après les concours, j'ai rejoint l'ENSEEIHT en Sciences du Numérique, où j'ai étudié la programmation impérative, les technologies orientées objet, le calcul scientifique et le deep learning. J'ai ensuite effectué un stage chez Velours3D (Maroc) sur la suppression d'ombres dans des rendus 3D via OpenCV et deep learning. Je réalise actuellement mon stage de fin d'études chez Siemens Digital Industry Software (Toulouse), où je développe des outils IA pour automatiser la traduction de procédures de fabrication pharmaceutiques vers le format Smart Operation Designer, en utilisant Claude LLM, des serveurs MCP et une base de connaissances structurée.",
       tools: "Outils que j'utilise",
       interests: "Centres d'intérêt",
     },
@@ -146,10 +154,18 @@ export const translations = {
         title: "Minishell - Interpréteur de Commandes Unix",
         description: "Interpréteur Unix en C gérant pipes, redirections, signaux et gestion fine des processus.",
       },
+      debate: {
+        title: "Multi-Agent Debate Arena",
+        description: "Deux agents Claude débattent de n'importe quel sujet en rounds structurés. Un troisième agent Opus rend un verdict avec scoring ELO et K-factor adaptatif.",
+      },
+      nas: {
+        title: "Neural Architecture Search",
+        description: "Système AutoML qui cherche automatiquement les meilleures architectures de réseaux de neurones via optimisation bayésienne (Optuna TPE) et algorithmes évolutionnaires, ciblant les contraintes edge AI.",
+      },
     },
     experience: {
       title: "Expérience Professionnelle",
-      subtitle: "Mon parcours professionnel en image processing et computer vision",
+      subtitle: "Mon parcours professionnel en IA, image processing et computer vision",
     },
     inspiration: {
       title: "Ce qui m'inspire",

@@ -4,6 +4,20 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    title: "Stage Ingénieur IA — Outils IA pour MES Pharma",
+    company: "Siemens Digital Industry Software",
+    period: "Juin 2026 – Présent",
+    location: "Toulouse, France",
+    description: [
+      "Conception et implémentation d'une pipeline de traduction automatique Oracle HTML → Langage naturel → JSON SOD (Smart Operation Designer) via LLM Claude (Anthropic API)",
+      "Développement d'agents IA spécialisés sur une base de connaissances structurée (OKF) couvrant la documentation produit Opcenter Execution Pharma",
+      "Mise en place de serveurs MCP (Model Context Protocol) par corpus documentaire pour accès contextuel aux agents",
+      "Automatisation de tâches à haute valeur ajoutée : génération de backlog produit, analyse d'impact, documentation, optimisation des procédures qualité",
+      "Travail en méthodologie SAFe 6.0 avec équipes Scrum France / Inde, rythme PI de 10 semaines",
+    ],
+    technologies: ["Python", "Claude API", "MCP", "Oracle DB", "LLM", "RAG", "SAFe", "Agile"],
+  },
+  {
     title: "Stage Image Processing",
     company: "Velours3D",
     period: "Juin 2025 – Août 2025",
@@ -42,7 +56,7 @@ export default function Experience({ isDarkMode, language }) {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 font-Ovo">Expérience Professionnelle</h2>
           <p className={`text-xl ${textSecondary}`}>
-            Mon parcours professionnel en image processing et computer vision
+            Mon parcours professionnel en IA, image processing et computer vision
           </p>
         </div>
 

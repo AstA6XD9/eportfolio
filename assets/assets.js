@@ -169,19 +169,37 @@ export const serviceData = [
     {
         icon: assets.code_icon_dark,
         titleKey: 'minishell',
-        link: 'https://github.com/votre-username/minishell',
+        link: 'https://github.com/AstA6XD9/minishell',
         year: '2024',
         stack: ['C', 'Unix', 'Process Management'],
         status: 'Systems',
         category: 'Systems',
         image: '/projects/minishell.jpg'
     },
+    {
+        icon: assets.code_icon,
+        titleKey: 'debate',
+        link: 'https://github.com/AstA6XD9/multi-agent-debate',
+        year: '2025',
+        stack: ['Python', 'Claude API', 'Streamlit', 'ELO'],
+        status: 'Lab',
+        category: 'AI Agents',
+    },
+    {
+        icon: assets.project_icon,
+        titleKey: 'nas',
+        link: 'https://github.com/AstA6XD9/neural-architecture-search',
+        year: '2025',
+        stack: ['Python', 'PyTorch', 'Optuna', 'Evolutionary Search'],
+        status: 'Research',
+        category: 'AutoML',
+    },
 ]
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Python, Ada, Java, C,Ocaml' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'ENSEEIHT in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 3 projects' }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 9 projects' }
 ];
 
 export const toolsData = [

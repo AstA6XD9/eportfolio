@@ -87,9 +87,9 @@ export default function Home() {
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} language={language} setLanguage={setLanguage} />
       <Header isDarkMode={isDarkMode} language={language} />
       <About isDarkMode={isDarkMode} language={language} />
+      <Experience isDarkMode={isDarkMode} language={language} />
       <Skills isDarkMode={isDarkMode} language={language} />
       <Projects isDarkMode={isDarkMode} language={language} />
-      <Experience isDarkMode={isDarkMode} language={language} />
       <Inspiration isDarkMode={isDarkMode} language={language} />
       <Contact isDarkMode={isDarkMode} language={language} />
       <Footer isDarkMode={isDarkMode} language={language} />

@@ -107,9 +107,9 @@ export default function Navbar({ isDarkMode, setIsDarkMode, language, setLanguag
         >
           <li><a className={getLinkClasses('top')} href="#top" aria-current={activeSection === 'top' ? 'section' : undefined}>{language === "en" ? "Home" : "Accueil"}</a></li>
           <li><a className={getLinkClasses('about')} href="#about" aria-current={activeSection === 'about' ? 'section' : undefined}>{language === "en" ? "About me" : "À propos"}</a></li>
+          <li><a className={getLinkClasses('experience')} href="#experience" aria-current={activeSection === 'experience' ? 'section' : undefined}>{language === "en" ? "Experience" : "Expérience"}</a></li>
           <li><a className={getLinkClasses('skills')} href="#skills" aria-current={activeSection === 'skills' ? 'section' : undefined}>{language === "en" ? "Skills" : "Compétences"}</a></li>
           <li><a className={getLinkClasses('projects')} href="#projects" aria-current={activeSection === 'projects' ? 'section' : undefined}>{language === "en" ? "Projects" : "Projets"}</a></li>
-          <li><a className={getLinkClasses('experience')} href="#experience" aria-current={activeSection === 'experience' ? 'section' : undefined}>{language === "en" ? "Experience" : "Expérience"}</a></li>
           <li><a className={getLinkClasses('inspiration')} href="#inspiration" aria-current={activeSection === 'inspiration' ? 'section' : undefined}>{language === "en" ? "Inspiration" : "Inspiration"}</a></li>
           <li><a className={getLinkClasses('contact')} href="#contact" aria-current={activeSection === 'contact' ? 'section' : undefined}>{language === "en" ? "Contact" : "Contact"}</a></li>
         </motion.ul>
@@ -175,9 +175,9 @@ export default function Navbar({ isDarkMode, setIsDarkMode, language, setLanguag
           </div>  
           <li><a className={getLinkClasses('top')} onClick={closeMenu} href="#top">{language === "en" ? "Home" : "Accueil"}</a></li>
           <li><a className={getLinkClasses('about')} onClick={closeMenu} href="#about">{language === "en" ? "About me" : "À propos"}</a></li>
+          <li><a className={getLinkClasses('experience')} onClick={closeMenu} href="#experience">{language === "en" ? "Experience" : "Expérience"}</a></li>
           <li><a className={getLinkClasses('skills')} onClick={closeMenu} href="#skills">{language === "en" ? "Skills" : "Compétences"}</a></li>
           <li><a className={getLinkClasses('projects')} onClick={closeMenu} href="#projects">{language === "en" ? "Projects" : "Projets"}</a></li>
-          <li><a className={getLinkClasses('experience')} onClick={closeMenu} href="#experience">{language === "en" ? "Experience" : "Expérience"}</a></li>
           <li><a className={getLinkClasses('inspiration')} onClick={closeMenu} href="#inspiration">{language === "en" ? "Inspiration" : "Inspiration"}</a></li>
           <li><a className={getLinkClasses('contact')} onClick={closeMenu} href="#contact">{language === "en" ? "Contact" : "Contact"}</a></li>
         </ul>

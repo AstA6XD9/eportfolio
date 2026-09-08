@@ -74,6 +74,22 @@ export const translations = {
         title: "Neural Architecture Search",
         description: "AutoML system that automatically searches for optimal neural network architectures using Bayesian optimization (Optuna TPE) and evolutionary algorithms targeting edge AI constraints.",
       },
+      gazelearn: {
+        title: "GazeLearn",
+        description: "Eye-tracking system using computer vision (MediaPipe) to detect gaze direction and attention in real time — applied to adaptive learning and focus monitoring.",
+      },
+      gptsae: {
+        title: "GPT & SAE from Scratch",
+        description: "Full implementation of a GPT transformer and a Sparse Autoencoder (SAE) from scratch in PyTorch, exploring mechanistic interpretability of language model internals.",
+      },
+      mlscratch: {
+        title: "ML from Scratch",
+        description: "Clean NumPy implementations of core ML algorithms — linear/logistic regression, k-NN, decision trees, SVM, k-means — built to understand the math behind the models.",
+      },
+      uno: {
+        title: "UNO Game",
+        description: "Browser-based UNO card game with full rule enforcement, AI opponents, and animated card interactions built in vanilla HTML/CSS/JS.",
+      },
     },
     experience: {
       title: "Professional Experience",
@@ -161,6 +177,22 @@ export const translations = {
       nas: {
         title: "Neural Architecture Search",
         description: "Système AutoML qui cherche automatiquement les meilleures architectures de réseaux de neurones via optimisation bayésienne (Optuna TPE) et algorithmes évolutionnaires, ciblant les contraintes edge AI.",
+      },
+      gazelearn: {
+        title: "GazeLearn",
+        description: "Système eye-tracking par vision artificielle (MediaPipe) pour détecter la direction du regard et l'attention en temps réel — appliqué à l'apprentissage adaptatif et au monitoring de la concentration.",
+      },
+      gptsae: {
+        title: "GPT & SAE from Scratch",
+        description: "Implémentation complète d'un transformer GPT et d'un Sparse Autoencoder (SAE) from scratch en PyTorch, explorant l'interprétabilité mécanique des modèles de langage.",
+      },
+      mlscratch: {
+        title: "ML from Scratch",
+        description: "Implémentations NumPy des algorithmes ML fondamentaux — régression linéaire/logistique, k-NN, arbres de décision, SVM, k-means — pour comprendre les maths derrière les modèles.",
+      },
+      uno: {
+        title: "Jeu UNO",
+        description: "Jeu de cartes UNO jouable dans le navigateur avec respect complet des règles, adversaires IA et animations de cartes, développé en HTML/CSS/JS vanilla.",
       },
     },
     experience: {

@@ -194,6 +194,42 @@ export const serviceData = [
         status: 'Research',
         category: 'AutoML',
     },
+    {
+        icon: assets.graphics_icon,
+        titleKey: 'gazelearn',
+        link: 'https://github.com/AstA6XD9/GazeLearn',
+        year: '2025',
+        stack: ['Python', 'OpenCV', 'MediaPipe', 'Eye Tracking'],
+        status: 'Research',
+        category: 'Computer Vision',
+    },
+    {
+        icon: assets.code_icon,
+        titleKey: 'gptsae',
+        link: 'https://github.com/AstA6XD9/gpt_sae_from_scratch',
+        year: '2025',
+        stack: ['Python', 'PyTorch', 'Transformers', 'Mechanistic Interpretability'],
+        status: 'Research',
+        category: 'AI Research',
+    },
+    {
+        icon: assets.code_icon_dark,
+        titleKey: 'mlscratch',
+        link: 'https://github.com/AstA6XD9/ml_from_scratch-',
+        year: '2024',
+        stack: ['Python', 'NumPy', 'Matplotlib'],
+        status: 'Open source',
+        category: 'Machine Learning',
+    },
+    {
+        icon: assets.mobile_icon,
+        titleKey: 'uno',
+        link: 'https://github.com/AstA6XD9/UNO',
+        year: '2024',
+        stack: ['HTML', 'CSS', 'JavaScript'],
+        status: 'Play',
+        category: 'Web',
+    },
 ]
 
 export const infoList = [

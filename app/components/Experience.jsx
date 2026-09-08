@@ -4,18 +4,17 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    title: "Stage Ingénieur IA — Outils IA pour MES Pharma",
+    title: "Stage Ingénieur IA",
     company: "Siemens Digital Industry Software",
-    period: "Juin 2026 – Présent",
+    period: "Juin 2026 – Septembre 2026",
     location: "Toulouse, France",
     description: [
-      "Conception et implémentation d'une pipeline de traduction automatique Oracle HTML → Langage naturel → JSON SOD (Smart Operation Designer) via LLM Claude (Anthropic API)",
-      "Développement d'agents IA spécialisés sur une base de connaissances structurée (OKF) couvrant la documentation produit Opcenter Execution Pharma",
-      "Mise en place de serveurs MCP (Model Context Protocol) par corpus documentaire pour accès contextuel aux agents",
-      "Automatisation de tâches à haute valeur ajoutée : génération de backlog produit, analyse d'impact, documentation, optimisation des procédures qualité",
-      "Travail en méthodologie SAFe 6.0 avec équipes Scrum France / Inde, rythme PI de 10 semaines",
+      "Conception et implémentation d'une pipeline LLM (Claude API) de traduction automatique des procédures pharmaceutiques : Oracle HTML → langage naturel → JSON SOD (Smart Operation Designer), éliminant un processus 100% manuel",
+      "Développement d'un système d'agents IA spécialisés (DocKnowledgeBase) opérant sur une base de connaissances structurée (OKF) via serveurs MCP — couvrant génération de backlog, analyse d'impact, documentation et optimisation qualité",
+      "PoC présentée en System Demo devant les équipes R&D France et Inde, validant la faisabilité technique et transmise pour intégration future au produit Opcenter",
+      "Environnement industriel SAFe 6.0 : équipes Scrum multi-sites France/Inde, Program Increments de 10 semaines, collaboration directe avec le Program Manager Innovation",
     ],
-    technologies: ["Python", "Claude API", "MCP", "Oracle DB", "LLM", "RAG", "SAFe", "Agile"],
+    technologies: ["Python", "Claude API (Anthropic)", "MCP", "Oracle 19c", "LLM", "RAG", "Agents IA", "SAFe 6.0"],
   },
   {
     title: "Stage Image Processing",
@@ -118,4 +117,3 @@ export default function Experience({ isDarkMode, language }) {
     </section>
   );
 }
-

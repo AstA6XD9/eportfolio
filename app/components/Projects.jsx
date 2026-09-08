@@ -6,8 +6,8 @@ import { translations } from "../translations";
 
 const Projects = ({ isDarkMode, language }) => {
   const t = translations[language] || translations.en;
-  const featuredProject = serviceData.find((project) => project.highlight);
-  const otherProjects = serviceData.filter((project) => project !== featuredProject);
+  const featuredProjects = serviceData.filter((project) => project.highlight);
+  const otherProjects = serviceData.filter((project) => !project.highlight);
   
   const getProjectTitle = (titleKey) => t.projects[titleKey]?.title || titleKey;
   
@@ -60,62 +60,58 @@ const Projects = ({ isDarkMode, language }) => {
         </p>
       </motion.div>
 
-      {featuredProject && (
-        <motion.article
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
-          viewport={{ once: true }}
-          className={`rounded-3xl border ${cardBg} p-6 sm:p-10 lg:p-12 mb-12 relative overflow-hidden`}
-        >
-          <div className={`absolute inset-0 opacity-70 pointer-events-none bg-gradient-to-br ${gradientAccent}`} />
-          <div className="relative flex flex-col gap-8">
-            <div className="flex flex-wrap items-center gap-4">
-              <span className="text-sm uppercase tracking-[0.3em] font-semibold">{featuredProject.year}</span>
-              <span className={`text-xs font-semibold px-3 py-1 rounded-full ${badgeTone(featuredProject.status)}`}>
-                {featuredProject.status}
-              </span>
-              {featuredProject.category && (
-                <span className={`text-xs font-semibold px-3 py-1 rounded-full ${categoryBadge}`}>
-                  {featuredProject.category}
-                </span>
-              )}
-            </div>
-            <div>
-              <h3 className="text-3xl sm:text-4xl font-Ovo mb-4">{getProjectTitle(featuredProject.titleKey)}</h3>
-              <p className={`text-base sm:text-lg leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              {getProjectDescription(featuredProject.titleKey)}
-            </p>
-            </div>
-            <ul className="flex flex-wrap gap-3">
-              {featuredProject.stack?.map((tech) => (
-                <li key={tech} className={`text-xs sm:text-sm px-4 py-1.5 rounded-full border ${isDarkMode ? 'border-gray-600 text-gray-200' : 'border-gray-300 text-gray-700'}`}>
-                  {tech}
-                </li>
-              ))}
-            </ul>
-            <div className="grid gap-6">
-              <div className="rounded-2xl border border-white/10 p-4 backdrop-blur bg-white/5 dark:bg-white/5">
-                <p className="text-sm uppercase tracking-widest opacity-80">{language === "en" ? "Category" : "Catégorie"}</p>
-                <p className="text-2xl font-semibold">{featuredProject.category || '—'}</p>
+      {featuredProjects.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {featuredProjects.map((fp, i) => (
+            <motion.article
+              key={fp.titleKey}
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
+              viewport={{ once: true }}
+              className={`rounded-3xl border ${cardBg} p-6 sm:p-8 relative overflow-hidden flex flex-col gap-6`}
+            >
+              <div className={`absolute inset-0 opacity-70 pointer-events-none bg-gradient-to-br ${gradientAccent}`} />
+              <div className="relative flex flex-col gap-6 h-full">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="text-sm uppercase tracking-[0.3em] font-semibold">{fp.year}</span>
+                  <span className={`text-xs font-semibold px-3 py-1 rounded-full ${badgeTone(fp.status)}`}>
+                    {fp.status}
+                  </span>
+                  {fp.category && (
+                    <span className={`text-xs font-semibold px-3 py-1 rounded-full ${categoryBadge}`}>
+                      {fp.category}
+                    </span>
+                  )}
+                </div>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl font-Ovo mb-3">{getProjectTitle(fp.titleKey)}</h3>
+                  <p className={`text-sm sm:text-base leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                    {getProjectDescription(fp.titleKey)}
+                  </p>
+                </div>
+                <ul className="flex flex-wrap gap-2">
+                  {fp.stack?.map((tech) => (
+                    <li key={tech} className={`text-xs px-3 py-1.5 rounded-full border ${isDarkMode ? 'border-gray-600 text-gray-200' : 'border-gray-300 text-gray-700'}`}>
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto">
+                  <a
+                    href={fp.link}
+                    className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-full font-semibold shadow-lg transition-all duration-200 ${isDarkMode ? 'bg-gradient-to-r from-blue-400 to-indigo-500 text-white hover:opacity-90' : 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:opacity-90'}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t.projects.viewProject}
+                    <Image src={assets.right_arrow} alt="" className="w-4" />
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="flex flex-wrap items-center gap-4">
-              <a
-                href={featuredProject.link}
-                className={`inline-flex items-center gap-3 px-6 py-3 rounded-full font-semibold shadow-lg transition-all duration-200 ${isDarkMode ? 'bg-gradient-to-r from-blue-400 to-indigo-500 text-white hover:opacity-90' : 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:opacity-90'}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t.projects.viewProject}
-                <Image src={assets.right_arrow} alt="" className="w-4" />
-              </a>
-              <span className="text-sm text-gray-400">
-                {t.projects.highlighted}
-              </span>
-            </div>
-          </div>
-        </motion.article>
+            </motion.article>
+          ))}
+        </div>
       )}
       
       <motion.div 

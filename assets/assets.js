@@ -115,6 +115,26 @@ export const workData = [
 
 export const serviceData = [
     {
+        icon: assets.code_icon,
+        titleKey: 'debate',
+        link: 'https://github.com/AstA6XD9/multi-agent-debate',
+        year: '2026',
+        stack: ['Python', 'Claude API', 'Streamlit', 'ELO'],
+        status: 'Lab',
+        category: 'AI Agents',
+        highlight: true,
+    },
+    {
+        icon: assets.project_icon,
+        titleKey: 'nas',
+        link: 'https://github.com/AstA6XD9/neural-architecture-search',
+        year: '2026',
+        stack: ['Python', 'PyTorch', 'Optuna', 'Evolutionary Search'],
+        status: 'Research',
+        category: 'AutoML',
+        highlight: true,
+    },
+    {
         icon: assets.graphics_icon,
         titleKey: 'football',
         link: 'https://github.com/AstA6XD9/football-analysis',
@@ -123,43 +143,41 @@ export const serviceData = [
         status: 'Research',
         category: 'Machine Learning',
         image: '/projects/football-analysis.jpg',
-        highlight: true
     },
-    { 
-        icon: assets.web_icon, 
+    {
+        icon: assets.web_icon,
         titleKey: 'portfolio',
         link: 'https://github.com/AstA6XD9/portfolio',
         year: '2024',
         stack: ['Next.js', 'Tailwind', 'Framer Motion'],
         status: 'Live',
-        highlight: false
     },
-    { 
-        icon: assets.graphics_icon, 
+    {
+        icon: assets.graphics_icon,
         titleKey: 'shadowless',
         link: 'https://github.com/AstA6XD9/shadow-removal',
         year: '2025',
         stack: ['Python', 'OpenCV', 'UNet'],
         status: 'Research'
     },
-    { 
-        icon: assets.mobile_icon, 
+    {
+        icon: assets.mobile_icon,
         titleKey: 'audio',
         link: 'https://github.com/AstA6XD9/my-projects/tree/main/src',
         year: '2023',
         stack: ['JavaFX', 'MIDI', 'DSP'],
         status: 'Open source'
     },
-    { 
-        icon: assets.project_icon, 
+    {
+        icon: assets.project_icon,
         titleKey: 'huffman',
         link: 'https://github.com/AstA6XD9/my-projects',
         year: '2024',
         stack: ['Ada', 'Python', 'Bats'],
         status: 'CLI'
     },
-    { 
-        icon: assets.code_icon_dark, 
+    {
+        icon: assets.code_icon_dark,
         titleKey: 'matches',
         link: 'https://github.com/AstA6XD9/my-projects/tree/main/projet-court',
         year: '2024',
@@ -175,24 +193,6 @@ export const serviceData = [
         status: 'Systems',
         category: 'Systems',
         image: '/projects/minishell.jpg'
-    },
-    {
-        icon: assets.code_icon,
-        titleKey: 'debate',
-        link: 'https://github.com/AstA6XD9/multi-agent-debate',
-        year: '2025',
-        stack: ['Python', 'Claude API', 'Streamlit', 'ELO'],
-        status: 'Lab',
-        category: 'AI Agents',
-    },
-    {
-        icon: assets.project_icon,
-        titleKey: 'nas',
-        link: 'https://github.com/AstA6XD9/neural-architecture-search',
-        year: '2025',
-        stack: ['Python', 'PyTorch', 'Optuna', 'Evolutionary Search'],
-        status: 'Research',
-        category: 'AutoML',
     },
     {
         icon: assets.graphics_icon,

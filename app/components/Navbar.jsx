@@ -120,12 +120,11 @@ export default function Navbar({ isDarkMode, setIsDarkMode, language, setLanguag
           className='flex items-center gap-4'
         >
           <div className="relative">
-            <button 
-              className='p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors duration-300 flex items-center gap-2' 
+            <button
+              className={`px-3 py-1.5 text-sm font-semibold rounded-lg border transition-colors duration-200 ${isDarkMode ? 'border-gray-600 text-gray-200 hover:bg-gray-800' : 'border-gray-300 text-gray-700 hover:bg-gray-100'}`}
               onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
             >
-              <span className="text-xl">🌐</span>
-              <span className="text-sm font-semibold hidden sm:inline">{language === "en" ? "EN" : "FR"}</span>
+              {language === "en" ? "EN" : "FR"}
             </button>
             {isLangMenuOpen && (
               <>
@@ -136,15 +135,15 @@ export default function Navbar({ isDarkMode, setIsDarkMode, language, setLanguag
                 <div className={`absolute right-0 top-full mt-2 rounded-lg shadow-lg z-50 min-w-[140px] ${isDarkMode ? 'bg-gray-800' : 'bg-white'} border ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
                   <button
                     onClick={() => toggleLanguage("en")}
-                    className={`w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 rounded-t-lg transition-colors ${language === "en" ? (isDarkMode ? 'bg-gray-700' : 'bg-gray-100') : ''} ${isDarkMode ? 'text-white' : 'text-black'}`}
+                    className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded-t-lg transition-colors ${language === "en" ? (isDarkMode ? 'bg-gray-700' : 'bg-gray-100') : ''} ${isDarkMode ? 'text-white' : 'text-black'}`}
                   >
-                    🇬🇧 English
+                    English
                   </button>
                   <button
                     onClick={() => toggleLanguage("fr")}
-                    className={`w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 rounded-b-lg transition-colors ${language === "fr" ? (isDarkMode ? 'bg-gray-700' : 'bg-gray-100') : ''} ${isDarkMode ? 'text-white' : 'text-black'}`}
+                    className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded-b-lg transition-colors ${language === "fr" ? (isDarkMode ? 'bg-gray-700' : 'bg-gray-100') : ''} ${isDarkMode ? 'text-white' : 'text-black'}`}
                   >
-                    🇫🇷 Français
+                    Français
                   </button>
                 </div>
               </>

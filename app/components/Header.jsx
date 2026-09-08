@@ -81,17 +81,17 @@ export default function Header({ isDarkMode, language }) {
                                     href="/elouardini_cv.pdf"
                                     download
                                     onClick={() => setIsCvMenuOpen(false)}
-                                    className={`block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 rounded-t-lg transition-colors ${isDarkMode ? 'text-white' : 'text-black'}`}
+                                    className={`block w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded-t-lg transition-colors ${isDarkMode ? 'text-white' : 'text-black'}`}
                                 >
-                                    🇫🇷 CV Français
+                                    CV Français
                                 </a>
                                 <a
                                     href="/elouardini_cv_english.pdf"
                                     download
                                     onClick={() => setIsCvMenuOpen(false)}
-                                    className={`block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-700 rounded-b-lg transition-colors ${isDarkMode ? 'text-white' : 'text-black'}`}
+                                    className={`block w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded-b-lg transition-colors ${isDarkMode ? 'text-white' : 'text-black'}`}
                                 >
-                                    🇬🇧 CV English
+                                    CV English
                                 </a>
                             </div>
                         </>

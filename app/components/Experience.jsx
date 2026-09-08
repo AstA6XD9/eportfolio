@@ -5,7 +5,7 @@ const experiences = [
   {
     title: "Stage Ingénieur IA",
     company: "Siemens Digital Industry Software",
-    period: "Juin 2025 – Septembre 2025",
+    period: "Juin 2026 – Septembre 2026",
     location: "Toulouse, France",
     description: [
       "Conception et implémentation d'une pipeline LLM (Claude API) de traduction automatique des procédures pharmaceutiques : Oracle HTML → langage naturel → JSON SOD (Smart Operation Designer), éliminant un processus 100% manuel",
